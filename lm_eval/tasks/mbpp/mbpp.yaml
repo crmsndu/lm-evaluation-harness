@@ -15,7 +15,7 @@ generation_kwargs:
   until:
     - "[DONE]"
   do_sample: false
-num_fewshot: 3
+num_fewshot: 0
 fewshot_config:
   sampler: first_n
   samples: !function utils.list_fewshot_samples

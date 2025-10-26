@@ -170,6 +170,7 @@ class TemplateAPI(TemplateLM):
         self._seed = int(seed)
         # max_length - 1 as we always have 1 token for generation
         eval_logger.info(f"Using max length {max_length} - 1")
+        eval_logger.info(f"Using max gen tokens {max_gen_toks}")
         self.max_length = max_length - 1
         if int(num_concurrent) <= 1:
             eval_logger.info(
