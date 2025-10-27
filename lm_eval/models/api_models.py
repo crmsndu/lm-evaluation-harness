@@ -474,6 +474,7 @@ class TemplateAPI(TemplateLM):
                     **kwargs,
                 ),
                 headers=self.header,
+                timeout=3000,   # 50 minutes timeout
                 verify=self.verify_certificate,
             )
             if not response.ok:
@@ -516,6 +517,7 @@ class TemplateAPI(TemplateLM):
                 self.base_url,
                 json=payload,
                 headers=self.header,
+                timeout=3000,   # 50 minutes timeout
             ) as response:
                 if not response.ok:
                     error_text = await response.text()
